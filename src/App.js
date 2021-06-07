@@ -8,7 +8,7 @@ function App() {
         My React webpage
       </h1>
       <p>
-        testing changes
+        Testing changes.
       </p>
       
     </div>
