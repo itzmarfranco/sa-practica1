@@ -2,20 +2,25 @@ pipeline {
     agent any
 
     stages {
-        stage ('build'){
+        stage ('install'){
             steps{
-                echo "npm run build"
+                bat "npm install"
             }
         }
         stage ('test'){
             steps{
-                echo "npm run test"
+                bat "npm run test"
             }
         }
         stage ('deploy'){
             steps{
                 echo "Deploying to the cloud..."
             }
+        }
+    }
+    post {
+        failure {
+            echo "Error ocurred. Not deploying"
         }
     }
 }
