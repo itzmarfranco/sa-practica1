@@ -22,5 +22,8 @@ pipeline {
         failure {
             echo "Error ocurred. Not deploying"
         }
+        success{
+            bat "fab backend"
+        }
     }
 }
